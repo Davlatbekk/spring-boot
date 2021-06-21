@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "upload.folder",
+      "type": "java.lang.String",
+      "description": "Description for upload.folder."
+    },
+    {
+      "name": "upload.folder",
+      "type": "java.lang.String",
+      "description": "Description for upload.folder."
+    },
+    {
+      "name": "upload.folder",
+      "type": "java.lang.String",
+      "description": "Description for upload.folder."
+    }
+  ] }
