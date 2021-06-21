@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface FileStorageRepsitory extends JpaRepository <FileStorage,Long> {
+public interface FileStorageRepository extends JpaRepository <FileStorage,Long> {
 
     FileStorage findByHashId(String hashId);
 

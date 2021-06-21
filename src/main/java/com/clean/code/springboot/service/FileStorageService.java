@@ -2,7 +2,7 @@ package com.clean.code.springboot.service;
 
 import com.clean.code.springboot.domain.FileStorage;
 import com.clean.code.springboot.domain.FileStoreageStatus;
-import com.clean.code.springboot.repository.FileStorageRepsitory;
+import com.clean.code.springboot.repository.FileStorageRepository;
 import org.hashids.Hashids;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -18,16 +18,16 @@ import java.util.List;
 @Service
 public class FileStorageService {
 
-    private final FileStorageRepsitory fileStorageRepository;
-    public FileStorage f;
+    private final FileStorageRepository fileStorageRepository;
+
 
     @Value("${upload.folder}")
     private String uploadFolder;
 
     private final Hashids hashids;
 
-    public FileStorageService(FileStorageRepsitory fileStorageRepsitory){
-        this.fileStorageRepository = fileStorageRepsitory;
+    public FileStorageService(FileStorageRepository fileStorageRepository){
+        this.fileStorageRepository = fileStorageRepository;
         this.hashids = new Hashids(getClass().getName(),6);
 
     }
